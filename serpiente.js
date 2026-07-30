@@ -29,9 +29,20 @@ function dibujarTablero(){
     ctx.stroke();
   }
 }
-
+function pintarParte(lineaX, lineaY){
+  ctx.fillStyle = "#ffe75cd0";
+  ctx.fillRect(lineaX*TAMANIO_CELDA,lineaY*TAMANIO_CELDA,TAMANIO_CELDA,TAMANIO_CELDA);
+  ctx.strokeRect(lineaX*TAMANIO_CELDA,lineaY*TAMANIO_CELDA,TAMANIO_CELDA,TAMANIO_CELDA)
+}
 function dibujarTodo() {
   limpiarCanvas();
   dibujarTablero();
+  pintarParte(5,5);
+  pintarParte(10,2);
+  pintarParte(19,5);
+  pintarParte(0,10);
+  pintarParte(5,19);
+  pintarParte(0,19);
+
 }
 
